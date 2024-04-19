@@ -1,16 +1,37 @@
 package endereco.entities;
 
-public class Pais {
-    // Atributo público para armazenar o nome do país
-    public String Nome;
+import java.util.ArrayList;
+import java.util.List;
 
-    // Método getter para obter o nome do país
-    public String getNome() {
-        return Nome;
+public class Pais {
+    public String nome;
+    private List<Estado> estados;
+
+    public Pais() {
+        this.estados = new ArrayList<>();
     }
 
-    // Método setter para definir o nome do país
+    public void adicionarEstado(Estado estado) {
+        estados.add(estado);
+    }
+
+    public void removerEstado(Estado estado) {
+        estados.remove(estado);
+    }
+
+    public List<Estado> getEstados() {
+        return estados;
+    }
+
+    public void setEstados(List<Estado> estados) {
+        this.estados = estados;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
     public void setNome(String nome) {
-        this.Nome = nome;
+        this.nome = nome;
     }
 }
