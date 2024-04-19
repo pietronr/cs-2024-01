@@ -1,6 +1,8 @@
 package endereco.entities;
 
 import endereco.enums.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Endereco {
     private Integer numero;
@@ -8,6 +10,7 @@ public class Endereco {
     private Integer cep;
     public Bairro bairro;
     public TipoEndereco tipoEndereco;
+    public List<Logradouro> logradouros;
 
     public Endereco(Integer numero, String complemento, Integer cep, Bairro bairro, TipoEndereco tipoEndereco) {
         this.numero = numero;
@@ -15,6 +18,7 @@ public class Endereco {
         this.cep = cep;
         this.bairro = bairro;
         this.tipoEndereco = tipoEndereco;
+        this.logradouros = new ArrayList<>();
     }
 
     public Integer getNumero() {
@@ -55,6 +59,22 @@ public class Endereco {
 
     public void setTipoEndereco(TipoEndereco tipoEndereco) {
         this.tipoEndereco = tipoEndereco;
+    }
+
+    public List<Logradouro> getLogradouros() {
+        return logradouros;
+    }
+
+    public void setLogradouros(List<Logradouro> logradouros) {
+        this.logradouros = logradouros;
+    }
+
+    public void adicionarLogradouro(Logradouro logradouro) {
+        logradouros.add(logradouro);
+    }
+
+    public void removerLogradouro(Logradouro logradouro) {
+        logradouros.remove(logradouro);
     }
 
     @Override
