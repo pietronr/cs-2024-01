@@ -1,14 +1,17 @@
 package endereco.entities;
 
 import endereco.enums.TipoLogradouro;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Logradouro {
     private String nome;
-    public Endereco endereco;
     public TipoLogradouro tipoLogradouro;
+    public List<Endereco> enderecos;
 
-    public Logradouro(Endereco endereco) {
-        this.endereco = endereco;
+    public Logradouro(TipoLogradouro tipoLogradouro) {
+        this.tipoLogradouro = tipoLogradouro;
+        this.enderecos = new ArrayList<>();
     }
 
     public String getNome() {
@@ -19,19 +22,27 @@ public class Logradouro {
         this.nome = nome;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
-
     public TipoLogradouro getTipoLogradouro() {
         return tipoLogradouro;
     }
 
     public void setTipoLogradouro(TipoLogradouro tipoLogradouro) {
         this.tipoLogradouro = tipoLogradouro;
+    }
+
+    public List<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
+    }
+
+    public void adicionarEndereco(Endereco endereco) {
+        enderecos.add(endereco);
+    }
+
+    public void removerEndereco(Endereco endereco) {
+        enderecos.remove(endereco);
     }
 }
