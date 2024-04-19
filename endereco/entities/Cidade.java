@@ -13,12 +13,20 @@ public class Cidade {
         this.bairros = new ArrayList<>();
     }
 
-    public void adicionarBairro(Bairro bairro) {
-        bairros.add(bairro);
+    public String getNome() {
+        return nome;
     }
 
-    public void removerBairro(Bairro bairro) {
-        bairros.remove(bairro);
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
     }
 
     public List<Bairro> getBairros() {
@@ -29,21 +37,11 @@ public class Cidade {
         this.bairros = bairros;
     }
 
-    // Método getter para obter o objeto Pais
-    public Estado getEstado() {
-        return estado;
+    public void adicionarBairro(Bairro bairro) {
+        bairros.add(bairro);
     }
 
-    // Método setter para definir o objeto Pais
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void removerBairro(Bairro bairro) {
+        bairros.remove(bairro);
     }
 }

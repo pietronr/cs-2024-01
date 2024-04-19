@@ -1,15 +1,15 @@
 package endereco.entities;
+
 import endereco.enums.*;
 
 public class Endereco {
-    private String numero;
+    private Integer numero;
     private String complemento;
-    private String cep;
+    private Integer cep;
     public Bairro bairro;
     public TipoEndereco tipoEndereco;
 
-    // Construtor
-    public Endereco(String numero, String complemento, String cep, Bairro bairro, TipoEndereco tipoEndereco) {
+    public Endereco(Integer numero, String complemento, Integer cep, Bairro bairro, TipoEndereco tipoEndereco) {
         this.numero = numero;
         this.complemento = complemento;
         this.cep = cep;
@@ -17,12 +17,11 @@ public class Endereco {
         this.tipoEndereco = tipoEndereco;
     }
 
-    // Getters e setters para numero, complemento, cep, bairro e tipoEndereco
-    public String getNumero() {
+    public Integer getNumero() {
         return numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(Integer numero) {
         this.numero = numero;
     }
 
@@ -34,11 +33,11 @@ public class Endereco {
         this.complemento = complemento;
     }
 
-    public String getCep() {
+    public Integer getCep() {
         return cep;
     }
 
-    public void setCep(String cep) {
+    public void setCep(Integer cep) {
         this.cep = cep;
     }
 
@@ -58,7 +57,6 @@ public class Endereco {
         this.tipoEndereco = tipoEndereco;
     }
 
-    // Método toString para representar o endereço como uma String
     @Override
     public String toString() {
         return "Endereco{" +
@@ -70,4 +68,3 @@ public class Endereco {
                 '}';
     }
 }
-

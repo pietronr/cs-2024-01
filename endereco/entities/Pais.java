@@ -11,12 +11,12 @@ public class Pais {
         this.estados = new ArrayList<>();
     }
 
-    public void adicionarEstado(Estado estado) {
-        estados.add(estado);
+    public String getNome() {
+        return nome;
     }
 
-    public void removerEstado(Estado estado) {
-        estados.remove(estado);
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public List<Estado> getEstados() {
@@ -27,11 +27,11 @@ public class Pais {
         this.estados = estados;
     }
 
-    public String getNome() {
-        return nome;
+    public void adicionarEstado(Estado estado) {
+        estados.add(estado);
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void removerEstado(Estado estado) {
+        estados.remove(estado);
     }
 }

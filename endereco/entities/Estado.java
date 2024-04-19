@@ -10,34 +10,9 @@ public class Estado {
     public Pais pais;
     private List<Cidade> cidades;
 
-        
     public Estado(Pais pais) {
         this.pais = pais;
         this.cidades = new ArrayList<>();
-    }
-    
-    public void adicionarCidade(Cidade cidade) {
-        cidades.add(cidade);
-    }
-
-    public void removerCidade(Cidade cidade) {
-        cidades.remove(cidade);
-    }
-
-    public List<Cidade> getCidades() {
-        return cidades;
-    }
-
-    public void setCidades(List<Cidade> cidades) {
-        this.cidades = cidades;
-    }
-
-    public Pais getPais() {
-        return pais;
-    }
-
-    public void setPais(Pais pais) {
-        this.pais = pais;
     }
 
     public String getSigla() {
@@ -54,5 +29,29 @@ public class Estado {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public Pais getPais() {
+        return pais;
+    }
+
+    public void setPais(Pais pais) {
+        this.pais = pais;
+    }
+
+    public List<Cidade> getCidades() {
+        return cidades;
+    }
+
+    public void setCidades(List<Cidade> cidades) {
+        this.cidades = cidades;
+    }
+
+    public void adicionarCidade(Cidade cidade) {
+        cidades.add(cidade);
+    }
+
+    public void removerCidade(Cidade cidade) {
+        cidades.remove(cidade);
     }
 }

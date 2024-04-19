@@ -37,7 +37,6 @@ public class Bairro {
         this.enderecos = enderecos;
     }
 
-    
     public void adicionarEndereco(Endereco endereco) {
         enderecos.add(endereco);
     }
