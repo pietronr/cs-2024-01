@@ -4,8 +4,8 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 
 public class Divisor {
-    public double numerador;
-    public double denominador;
+    private double numerador;
+    private double denominador;
 
     public double getNumerador() {
         return this.numerador;
