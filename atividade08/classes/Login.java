@@ -12,8 +12,8 @@ public class Login {
     }
 
     public boolean fazerLogin(String usuario, String senha) throws LoginInvalidoException {
-        boolean usuarioValido = !this.usuario.equals(usuario);
-        boolean senhaValida = !this.senha.equals(senha);
+        boolean usuarioValido = this.usuario.equals(usuario);
+        boolean senhaValida = this.senha.equals(senha);
 
         if (!usuarioValido && !senhaValida) {
             throw new LoginInvalidoException("Usuário e senha incorretos");
