@@ -5,8 +5,19 @@ import atividade08.classes.PreencheArray;
 
 public class Main {
     public static void main(String[] args) {
-        PreencheArray preenche = new PreencheArray();
+        try {
+            Divisor divisor = new Divisor();
+            divisor.executar();
+        } catch (Exception e) {
+            System.out.println("Exceção na divisão");
+        }
 
-        preenche.executar();
+        try {
+            PreencheArray preenche = new PreencheArray();
+            preenche.executar();
+        }
+        catch (Exception e) {
+            System.out.println("Exceção no preenchimento do array");
+        }
     }
 }
