@@ -10,7 +10,6 @@ import atividade08.classes.Login;
 import atividade08.exceptions.LoginInvalidoException;
 
 public class LoginTests {
-
     @Test
     public void testeLoginCorreto() {
         Login login = new Login("usuario", "senha");
