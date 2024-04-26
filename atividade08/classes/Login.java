@@ -12,10 +12,16 @@ public class Login {
     }
 
     public boolean fazerLogin(String usuario, String senha) throws LoginInvalidoException {
-        if (!this.usuario.equals(usuario)) {
+        boolean usuarioValido = !this.usuario.equals(usuario);
+        boolean senhaValida = !this.senha.equals(senha);
+
+        if (!usuarioValido && !senhaValida) {
+            throw new LoginInvalidoException("Usuário e senha incorretos");
+        }
+        if (!usuarioValido) {
             throw new LoginInvalidoException("Usuário incorreto");
         }
-        else if (!this.senha.equals(senha)) {
+        else if (!senhaValida) {
             throw new LoginInvalidoException("Senha incorreta");
         } else {
             return true;
